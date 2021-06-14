@@ -15,10 +15,14 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.github.ngbinh.scalastyle
+package com.workday.warp.scalastyle
+
 
 import org.gradle.api.file.FileTree
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.InputDirectory
 import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.OutputFile
 import org.gradle.api.tasks.SkipWhenEmpty
 import org.gradle.api.tasks.SourceTask
@@ -28,28 +32,44 @@ import org.scalastyle.TextOutput
 import org.scalastyle.XmlOutput
 
 /**
+ * @author Richie Wang
+ * @since 6/9/2021
  * @author Binh Nguyen
  * @since 12/16/2014
  * @author Muhammad Ashraf
  * @since 5/11/13
  */
 class ScalaStyleTask extends SourceTask {
+    @InputDirectory
     File buildDirectory = project.buildDir
+    @Input
     String configLocation
+    @Input
     String testConfigLocation
     @OutputFile
     String outputFile = buildDirectory.absolutePath + "/scala_style_result.xml"
+    @Input
     String outputEncoding = "UTF-8"
+    @Input
     Boolean failOnViolation = true
+    @Input
     Boolean failOnWarning = false
+    @Input
     Boolean skip = false
+    @Input
     Boolean verbose = false
+    @Input
     Boolean quiet = false
+    @Input
     Boolean includeTestSourceDirectory = true
+    @Input
     String inputEncoding = "UTF-8"
-    ScalaStyleUtils scalaStyleUtils = new ScalaStyleUtils()
+    @Input
     String testSource
+    @InputDirectory
     FileTree testSourceDir
+    @Internal
+    ScalaStyleUtils scalaStyleUtils = new ScalaStyleUtils()
 
     ScalaStyleTask() {
         super()

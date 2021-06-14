@@ -1,0 +1,7 @@
+group = 'com.workday.warp'
+
+project.ext.versions = [
+        junit: '4.11',
+        scalastyle: '1.0.0',
+        spock: '2.0-groovy-3.0'
+]

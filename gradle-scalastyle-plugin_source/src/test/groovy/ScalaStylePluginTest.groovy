@@ -1,4 +1,4 @@
-import org.github.ngbinh.scalastyle.ScalaStyleTask
+import com.workday.warp.scalastyle.ScalaStyleTask
 import org.gradle.api.Project
 import org.gradle.testfixtures.ProjectBuilder
 import spock.lang.Specification
