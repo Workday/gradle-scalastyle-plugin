@@ -15,12 +15,14 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.github.ngbinh.scalastyle
+package com.workday.warp.scalastyle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 /**
+ * @author Richie Wang
+ * @since 6/9/2021
  * @author Binh Nguyen
  * @since 12/16/2014
  * @author Muhammad Ashraf

@@ -16,18 +16,19 @@
  *    limitations under the License.
  */
 
-package org.github.ngbinh.scalastyle
+package com.workday.warp.scalastyle
 
-import org.scalastyle.{Directory, FileSpec, Message}
-import org.scalastyle.ScalastyleChecker
-import org.scalastyle.ScalastyleConfiguration
-import com.typesafe.config.ConfigFactory
-import com.typesafe.config.Config
 import java.io.File
 import java.util.{List => jList}
+
+import com.typesafe.config.{Config, ConfigFactory}
+import org.scalastyle._
+
 import scala.collection.JavaConverters._
 
 /**
+  * @author Richie Wang
+  * @since 6/9/2021
   * @author Binh Nguyen
   * @since 12/16/2014
   * @author Muhammad Ashraf

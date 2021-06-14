@@ -15,3 +15,25 @@
  */
 
 // Empty for now
+
+plugins {
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish'
+}
+
+pluginBundle {
+    website = "https://github.com/Workday"
+    vcsUrl = "https://github.com/Workday/gradle-scalastyle-plugin"
+    tags = ["scalastyle", "gradle"]
+}
+
+gradlePlugin {
+    plugins {
+        greetingsPlugin {
+            id = "com.workday.warp.scalastyle_2.10"
+            displayName = "Gradle Scalastyle"
+            description = "Gradle plugin for running the Scalastyle style checker"
+            implementationClass = "com.workday.warp.scalastyle.ScalaStylePlugin"
+        }
+    }
+}
