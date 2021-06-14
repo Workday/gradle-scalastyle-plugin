@@ -1,5 +1,7 @@
 # Scala Style Gradle Plugin
 
+Forked from https://github.com/ngbinh/gradle-scalastyle-plugin. We switched to using the gradle publish plugin since bintray/JCenter has been EOL.
+
 [![Build Status](https://travis-ci.org/ngbinh/gradle-scalastyle-plugin.svg?branch=master)](https://travis-ci.org/ngbinh/gradle-scalastyle-plugin)
 
 ### Instructions
